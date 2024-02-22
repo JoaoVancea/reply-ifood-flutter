@@ -19,8 +19,8 @@ class _TelaInicioState extends State<TelaInicio> {
         centerTitle: true,
         actions: const [
           Padding(
-            padding: EdgeInsets.all(8.0)),
-          Icon(Icons.notifications, color: Colors.red,)
+            padding: EdgeInsets.all(8.0),
+            child: Icon(Icons.notifications, color: Colors.red))
         ],
       ),
       body: ListView(
@@ -29,8 +29,8 @@ class _TelaInicioState extends State<TelaInicio> {
             padding: const EdgeInsets.all(8.0),
             child: Row(
               children: [
-                card(185, 80, const Color.fromARGB(255, 243, 234, 234), "Pet Shop", "assets/pet.png"),
-                card(185, 80, const Color.fromARGB(255, 243, 234, 234), "Mercado", "assets/mercado.png"),
+                card(185, 80, Colors.grey, "Pet Shop", "assets/pet.png"),
+                card(185, 80, Colors.grey, "Mercado", "assets/mercado.png"),
               ],
             ),
           ),

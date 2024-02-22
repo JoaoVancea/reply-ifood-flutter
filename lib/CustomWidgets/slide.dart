@@ -98,7 +98,7 @@ class _SlideState extends State<Slide> {
           PageView(controller: pageController, children: [
             Container(width: double.infinity, height: 20, color: Colors.black),
             Container(width: double.infinity, height: 20, color: Colors.red),
-            Container(width: double.infinity, height: 20, color: Colors.blue)
+            Container(width: double.infinity, height: 20, color: Colors.orange)
           ]),
           Padding(
             padding: const EdgeInsets.all(8.0),

@@ -9,20 +9,110 @@ class DadosCard {
       "texto": "Mercado",
       "imagem": "assets/mercado.png"
     },
+    {
+      "largura": 185,
+      "altura": 100,
+      "cor": Colors.orange,
+      "texto": "Farmácia",
+      "imagem": "assets/farmacia.png"
+    },
+    {
+      "largura": 185,
+      "altura": 100,
+      "cor": const Color.fromARGB(235, 221, 140, 19),
+      "texto": "Bebidas",
+      "imagem": "assets/bebidas.png"
+    },
+    {
+      "largura": 185,
+      "altura": 100,
+      "cor": const Color.fromARGB(255, 1, 100, 4),
+      "texto": "Pet",
+      "imagem": "assets/pet.png"
+    },
+    {
+      "largura": 185,
+      "altura": 100,
+      "cor": Colors.orange,
+      "texto": "Açaí",
+      "imagem": "assets/acai.png"
+    },
+    {
+      "largura": 185,
+      "altura": 100,
+      "cor": Colors.orange,
+      "texto": "Bolo",
+      "imagem": "assets/bolo.png"
+    },
+    {
+      "largura": 185,
+      "altura": 100,
+      "cor": Colors.orange,
+      "texto": "Sorvete",
+      "imagem": "assets/sorvete.png"
+    },
+    {
+      "largura": 185,
+      "altura": 100,
+      "cor": Colors.pink,
+      "texto": "Café",
+      "imagem": "assets/cafe.png"
+    },
+    {
+      "largura": 185,
+      "altura": 100,
+      "cor": Colors.orange,
+      "texto": "Lanches",
+      "imagem": "assets/lanches.png"
+    },
+    {
+      "largura": 185,
+      "altura": 100,
+      "cor": Colors.green,
+      "texto": "Pizza",
+      "imagem": "assets/pizza.png"
+    },
+    {
+      "largura": 185,
+      "altura": 100,
+      "cor": Colors.green,
+      "texto": "Espetinho",
+      "imagem": "assets/carnes.png"
+    },
+    {
+      "largura": 185,
+      "altura": 100,
+      "cor": Colors.orange,
+      "texto": "Hot Dog",
+      "imagem": "assets/hotDog.png"
+    },
+    {
+      "largura": 185,
+      "altura": 100,
+      "cor": Colors.orange,
+      "texto": "Marmita",
+      "imagem": "assets/marmita.png"
+    },
+    {
+      "largura": 185,
+      "altura": 100,
+      "cor": Colors.orange,
+      "texto": "Suco",
+      "imagem": "assets/sucos.png"
+    },
+    {
+      "largura": 185,
+      "altura": 100,
+      "cor": Colors.orange,
+      "texto": "Sopas",
+      "imagem": "assets/sopas.png"
+    },
+    {
+      "largura": 185,
+      "altura": 100,
+      "cor": Colors.orange,
+      "texto": "Tapioca",
+      "imagem": "assets/tapioca.png"
+    },
   ];
 }
-/*card(185, 100, Colors.orange, 'Farmácia', 'assets/farmacia.png'),
-              card(185, 100, const Color.fromARGB(235, 221, 140, 19), 'Bebidas', 'assets/bebidas.png'),
-              card(185, 100, const Color.fromARGB(255, 1, 100, 4), 'Pet', 'assets/pet.png'),
-              card(185, 100, Colors.orange, 'Açaí', 'assets/acai.png'),
-              card(185, 100, Colors.orange, 'Bolo', 'assets/bolo.png'),
-              card(185, 100, Colors.orange, 'Sorvete', 'assets/sorvete.png'),
-              card(185, 100, Colors.pink, 'Café', 'assets/cafe.png'),
-              card(185, 100, Colors.orange, 'Lanches', 'assets/lanches.png'),
-              card(185, 100, Colors.orange, 'Pizza', 'assets/pizza.png'),
-              card(185, 100, Colors.green, 'Espetinho', 'assets/carnes.png'),
-              card(185, 100, Colors.orange, 'Hot Dog', 'assets/hotDog.png'),
-              card(185, 100, Colors.orange, 'Marmita', 'assets/marmita.png'),
-              card(185, 100, Colors.orange, 'Suco', 'assets/sucos.png'),
-              card(185, 100, Colors.orange, 'Sopas', 'assets/sopas.png'),
-              card(185, 100, Colors.orange, 'Tapioca', 'assets/tapioca.png'),*/
