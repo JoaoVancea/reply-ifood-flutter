@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 class Slide extends StatefulWidget {
@@ -9,32 +10,32 @@ class Slide extends StatefulWidget {
 }
 
 class _SlideState extends State<Slide> {
-  //objeto que define o controle das páginas
   PageController pageController = PageController();
-  List<double> progresso = [0.0, 0.0, 0.0];
-  int qtdPaginas = 3;
+  List<double> progresso = [0.0, 0.0, 0.0, 0.0];
+  int qtdPaginas = 4;
   int paginaAtual = 0;
 
-  //metodo que é chamado antes da página ser construída para o efeito acontecer logo ao ser carregada
+  //Método que é chamado antes da página ser constrúida
+
   @override
   void initState() {
     super.initState();
     nextPage();
   }
 
-  //metodo para mudar de página periodicamente
   nextPage() {
     Timer.periodic(const Duration(seconds: 3), (timer) {
-      //crio uma variável para comparar com a quantidade de páginas
+      //variavel para comparar com a quantidade de paginas
       int proximaPagina = paginaAtual + 1;
-      //quando essa variável for = a quantidade de páginas, reseta as páginas
+
       if (proximaPagina >= qtdPaginas) {
+        //qnd a variavel for = a quantidade de paginas, reseta as paginas
         proximaPagina = 0;
       }
 
       pageController
           .animateToPage(proximaPagina,
-              duration: const Duration(milliseconds: 300), curve: Curves.linear)
+              duration: Duration(milliseconds: 300), curve: Curves.linear)
           .then((_) {
         setState(() {
           paginaAtual = proximaPagina;
@@ -44,9 +45,9 @@ class _SlideState extends State<Slide> {
     });
   }
 
-  //inicar o progresso
+  //iniciar o progresso
   void iniciarProgresso() {
-    Timer.periodic(const Duration(milliseconds: 50), (timer) {
+    Timer.periodic(Duration(milliseconds: 50), (timer) {
       setState(() {
         if (progresso[paginaAtual] < 1) {
           progresso[paginaAtual] += 0.02;
@@ -58,14 +59,16 @@ class _SlideState extends State<Slide> {
   }
 
   //método para resetar a animação
+
   void reset() {
     for (int i = 0; i < qtdPaginas; i++) {
-      progresso[1] = 0.0;
+      progresso[i] = 0.0;
     }
     iniciarProgresso();
   }
 
   //método para criar o indicator
+
   List<Widget> buildIndicator() {
     List<Widget> lista = [];
     for (int i = 0; i < qtdPaginas; i++) {
@@ -90,15 +93,40 @@ class _SlideState extends State<Slide> {
     return Container(
       margin: const EdgeInsets.all(16),
       width: double.infinity,
-      height: 150,
+      height: 200,
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(8)),
       child: Stack(
         alignment: AlignmentDirectional.bottomCenter,
         children: [
           PageView(controller: pageController, children: [
-            Container(width: double.infinity, height: 20, color: Colors.black),
-            Container(width: double.infinity, height: 20, color: Colors.red),
-            Container(width: double.infinity, height: 20, color: Colors.orange)
+            SizedBox(
+                width: double.infinity,
+                height: 200,
+                child: Image.asset(
+                  'assets/pizza.gif',
+                  fit: BoxFit.cover,
+                )),
+            SizedBox(
+                width: double.infinity,
+                height: 200,
+                child: Image.asset(
+                  'assets/sanduiche.gif',
+                  fit: BoxFit.cover,
+                )),
+            SizedBox(
+                width: double.infinity,
+                height: 200,
+                child: Image.asset(
+                  'assets/carne.gif',
+                  fit: BoxFit.cover,
+                )),
+            SizedBox(
+                width: double.infinity,
+                height: 200,
+                child: Image.asset(
+                  'assets/massa.gif',
+                  fit: BoxFit.cover,
+                )),
           ]),
           Padding(
             padding: const EdgeInsets.all(8.0),
