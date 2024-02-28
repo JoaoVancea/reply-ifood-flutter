@@ -60,3 +60,45 @@ Container cardDois(double largura, double altura, Color? color, String texto, St
     ),
   );
 }
+
+Container cardTres(double largura, double altura, String imagem, String texto,
+    String subtexto, String tempo, Color? color) {
+  return Container(
+    width: largura,
+    height: altura,
+    child: Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        color: color,
+        child: Column(
+          children: [
+            Image.asset(
+              imagem,
+              width: double.infinity,
+              height: 80,
+              fit: BoxFit.cover,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                texto,
+                style: textNunitoBold(15),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                subtexto,
+                style: textNunitoVerde(13),
+              ),
+            ),
+            Text(
+              tempo,
+              style: textNunito300(12),
+            )
+          ],
+        ),
+      ),
+    ),
+  );
+}

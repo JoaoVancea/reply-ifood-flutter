@@ -5,7 +5,7 @@ import 'package:foodflutter/CustomWidgets/slide.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class TelaInicio extends StatefulWidget {
-  const TelaInicio({super.key});
+  const TelaInicio({Key? key}) : super(key: key);
 
   @override
   State<TelaInicio> createState() => _TelaInicioState();
@@ -16,49 +16,105 @@ class _TelaInicioState extends State<TelaInicio> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('R. Ari Barroso, 330', style: textNunitoBold(14)),
+        title: Text(
+          'R. Ari Barroso, 330',
+          style: textNunitoBold(18),
+        ),
         centerTitle: true,
         actions: const [
           Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Icon(Icons.notifications, color: Colors.red))
+            padding: EdgeInsets.all(8.0),
+            child: Icon(Icons.notifications, color: Colors.red),
+          ),
         ],
       ),
       body: ListView(
         children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              children: [
-                card(185, 80, Colors.grey, "Pet Shop", "assets/pet.png"),
-                card(185, 80, Colors.grey, "Mercado", "assets/mercado.png"),
-              ],
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  card(185, 90, Colors.grey,
+                      "Pet Shop", 'assets/pet.png'),
+                  card(185, 90, Colors.grey,
+                      "Mercado", 'assets/mercado.png'),
+                ],
+              ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              children: [
-                cardDois(90, 130, Colors.deepPurple[50], "Farmácia",
-                    "assets/farmacia.png"),
-                cardDois(90, 130, Colors.deepPurple[50], "Bebidas",
-                    "assets/bebidas.png"),
-                cardDois(90, 130, Colors.deepPurple[50], "Sucos",
-                    "assets/sucos.png"),
-                cardDois(90, 130, Colors.deepPurple[50], "Pizza",
-                    "assets/pizza.png"),
-              ],
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  cardDois(90, 130, Colors.deepPurple[50], "Farmácia",
+                      "assets/farmacia.png"),
+                  cardDois(90, 130, Colors.deepPurple[50], "Bebidas",
+                      "assets/bebidas.png"),
+                  cardDois(
+                      90, 130, Colors.deepPurple[50], "Sucos", "assets/sucos.png"),
+                  cardDois(
+                      90, 130, Colors.deepPurple[50], "Pizza", "assets/pizza.png")
+                ],
+              ),
             ),
           ),
           const Slide(),
-          const SizedBox(
-            height: 20,
+          const Padding(
+            padding: EdgeInsets.all(12.0),
+            child: Text('Tudo a partir de R\$ 5,00'),
           ),
           SizedBox(
             height: 250,
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Wrap(
+                    children: [
+                      cardTres(
+                          180,
+                          220,
+                          'assets/feijoadacard.jpg',
+                          'Feijoada',
+                          'RS 30,00',
+                          '23-33 minutos',
+                          const Color.fromARGB(255, 245, 240, 240)),
+                      cardTres(
+                          180,
+                          220,
+                          'assets/lanchegorgonzola.jpg',
+                          'Lanche Queijo',
+                          'RS 50,00',
+                          '43-60 minutos',
+                          const Color.fromARGB(255, 245, 240, 240)),
+                      cardTres(
+                          180,
+                          220,
+                          'assets/risoles.jpg',
+                          'Risoles',
+                          'RS 12,00',
+                          '15-25 minutos',
+                          const Color.fromARGB(255, 245, 240, 240)),
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
+          const SizedBox(
+            child: Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text('Ofertas especiais'),
+            ),
+          ),
+          SizedBox(
+            height: 250,
+            child: ListView(scrollDirection: Axis.horizontal, children: [
               Column(
                 children: [
                   SizedBox(
@@ -97,7 +153,7 @@ class _TelaInicioState extends State<TelaInicio> {
                       Text('Torta de Limão',
                           style: GoogleFonts.roboto(
                               fontSize: 16, fontWeight: FontWeight.bold)),
-                      Text('R\$40 min • R\$20,00',
+                      Text('40 min • R\$20,00',
                           style: GoogleFonts.roboto(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
@@ -112,7 +168,8 @@ class _TelaInicioState extends State<TelaInicio> {
                     child: Stack(
                       alignment: AlignmentDirectional.topStart,
                       children: [
-                        Image.asset('tortaChocolate.jpg', width: 300, height: 200),
+                        Image.asset('tortaChocolate.jpg',
+                            width: 300, height: 200),
                         Padding(
                           padding: const EdgeInsets.only(left: 15.0),
                           child: SizedBox(
@@ -126,7 +183,7 @@ class _TelaInicioState extends State<TelaInicio> {
                                     Icons.star,
                                     color: Colors.orange,
                                   ),
-                                  Text('4.9',
+                                  Text('4.5',
                                       style: GoogleFonts.roboto(
                                           fontSize: 16,
                                           fontWeight: FontWeight.bold,
@@ -141,10 +198,10 @@ class _TelaInicioState extends State<TelaInicio> {
                   ),
                   Column(
                     children: [
-                      Text('Torta de Limão',
+                      Text('Torta de Chocolate',
                           style: GoogleFonts.roboto(
                               fontSize: 16, fontWeight: FontWeight.bold)),
-                      Text('R\$40 min • R\$20,00',
+                      Text('20 min • R\$15,00',
                           style: GoogleFonts.roboto(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
@@ -173,7 +230,7 @@ class _TelaInicioState extends State<TelaInicio> {
                                     Icons.star,
                                     color: Colors.orange,
                                   ),
-                                  Text('4.9',
+                                  Text('4.7',
                                       style: GoogleFonts.roboto(
                                           fontSize: 16,
                                           fontWeight: FontWeight.bold,
@@ -188,10 +245,10 @@ class _TelaInicioState extends State<TelaInicio> {
                   ),
                   Column(
                     children: [
-                      Text('Torta de Limão',
+                      Text('Torta de Frango',
                           style: GoogleFonts.roboto(
                               fontSize: 16, fontWeight: FontWeight.bold)),
-                      Text('R\$40 min • R\$20,00',
+                      Text('15 min • R\$25,00',
                           style: GoogleFonts.roboto(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
@@ -201,6 +258,49 @@ class _TelaInicioState extends State<TelaInicio> {
                 ],
               ),
             ]),
+          ),
+          const Padding(
+            padding: EdgeInsets.all(12.0),
+            child: Text('Tudo a partir de R\$ 5,00'),
+          ),
+          SizedBox(
+            height: 250,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Wrap(
+                    children: [
+                      cardTres(
+                          180,
+                          220,
+                          'assets/feijoadacard.jpg',
+                          'Feijoada',
+                          'RS 30,00',
+                          '23-33 minutos',
+                          Color.fromARGB(255, 245, 240, 240)),
+                      cardTres(
+                          180,
+                          220,
+                          'assets/lanchegorgonzola.jpg',
+                          'Lanche Queijo',
+                          'RS 50,00',
+                          '43-60 minutos',
+                          const Color.fromARGB(255, 245, 240, 240)),
+                      cardTres(
+                          180,
+                          220,
+                          'assets/risoles.jpg',
+                          'Risoles',
+                          'RS 12,00',
+                          '15-25 minutos',
+                          const Color.fromARGB(255, 245, 240, 240)),
+                    ],
+                  ),
+                )
+              ],
+            ),
           ),
         ],
       ),
