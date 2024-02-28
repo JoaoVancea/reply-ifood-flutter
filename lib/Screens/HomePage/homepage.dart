@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foodflutter/Screens/Busca/search_screen.dart';
 import 'package:foodflutter/CustomWidgets/menuInferior.dart';
+import 'package:foodflutter/Screens/Pedidos/pedidos.dart';
 import 'package:foodflutter/Screens/Profile/profile_screen.dart';
 import 'package:foodflutter/Screens/TelaInicio/telaInicio.dart';
 
@@ -26,7 +27,7 @@ class _HomePageState extends State<HomePage> {
   List<Widget> telas = const [
     TelaInicio(),
     TelaBusca(),
-    Text('Pedidos'),
+    Pedidos(),
     ProfileScreen(),
   ];
 
